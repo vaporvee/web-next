@@ -7,6 +7,7 @@ node_modules
 
 # Local env files
 .env
+.env.production
 .env.local
 .env.development.local
 .env.test.local
@@ -18,6 +19,10 @@ coverage
 # Turbo
 .turbo
 
+# Typscript
+*.tsbuildinfo
+next-env.d.ts
+
 # Vercel
 .vercel
 
@@ -27,11 +32,21 @@ out/
 build
 dist
 
+# Astro
+.astro/
+
+# Sanity
+.sanity/
+
+# Logs
+/logs
+*.log
 
 # Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+bun.lockb
 
 # Misc
 .DS_Store
