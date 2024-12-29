@@ -1,5 +1,5 @@
 {
-  "name": "web-v2",
+  "name": "vaporvee-web-next",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -19,5 +19,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
+  ],
+  "trustedDependencies": [
+    "@parcel/watcher"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "name": "@repo/assets",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

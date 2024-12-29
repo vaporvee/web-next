@@ -1,0 +1,49 @@
+---
+title: Building
+sidebar:
+  badge:
+    text: WIP
+    variant: note
+---
+import { Steps } from '@astrojs/starlight/components';
+
+## How to build
+<Steps>
+1. Clone the project
+2. Install [python](https://www.python.org/downloads/)
+3. Install scons via pip with
+    ```sh
+    pip install scons
+    ```
+    and make sure to put scons on your PATH or replace "scons" with a scons run command<br/>
+
+4. Run this command 
+    ```sh title="Setting up project source..."
+    python setup.py
+    ``` 
+5. and build the project with 
+    ```sh title="Building plugin for current platform..."
+    python build.py 
+    ``` 
+    There is a prompt how it should start Godot (if `godot` is on
+    PATH) to test the addon fast directly.
+
+    **or** run
+    ```sh title="Building for DEBUG Godot project exports..."
+    scons
+    ```
+    and
+    ```sh title="Building for RELEASE Godot project exports..."
+    scons target=template_release
+    ```
+6. Now the addon should be installed in the project folder of the repo and can be exported with
+    ```sh title="Exporting zip and plugin demos..."
+    python release.py
+    ```
+</Steps>
+
+## MacOS Support
+
+:::note{title="Info"}
+MacOS is fully supported but its building process is not fully documented yet.
+:::
