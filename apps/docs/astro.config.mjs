@@ -3,7 +3,6 @@ import starlight from "@astrojs/starlight";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeInlineCodeLanguage from "rehype-inline-code-language";
 import icon from "astro-icon";
-import {favicons} from "@repo/assets"
 
 // https://astro.build/config
 export default defineConfig({

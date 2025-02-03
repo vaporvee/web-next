@@ -16,15 +16,6 @@ export default function Header({ owner, home, buttonStyles }: HeaderProps) {
     <header className="relative min-h-screen overflow-hidden bg-gray-900">
       <div
         className="absolute inset-0"
-        style={{
-          background: `
-          radial-gradient(circle at 0% 0%, #4CAF50, transparent 40%),
-          radial-gradient(circle at 100% 0%, #9C27B0, transparent 40%),
-          radial-gradient(circle at 100% 100%, #4CAF50, transparent 40%),
-          radial-gradient(circle at 0% 100%, #9C27B0, transparent 40%)
-        `,
-          filter: "blur(100px)",
-        }}
         aria-hidden="true"
       />
       <div

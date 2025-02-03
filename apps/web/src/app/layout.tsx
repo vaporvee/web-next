@@ -8,7 +8,7 @@ import ClientProviders from "@/components/client-providers";
 import { VisualEditing } from "next-sanity";
 import { NavbarEntryWithSublinks } from "./lib/navbar-entry";
 import { Navbar as Navigation } from "@/sanity/sanity.types";
-import { favicons } from "@repo/assets";
+import CatBox from "@/components/cat-box";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -69,9 +69,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href={favicons.ico.src} sizes="any" />
+        {/* <link rel="icon" href={favicons.ico.src} sizes="any" />
         <link rel="icon" href={favicons.svg.src} type="image/svg+xml" />
-        <link rel="apple-touch-icon" href={favicons.apple.src} />
+        <link rel="apple-touch-icon" href={favicons.apple.src} /> */}
         <title>vaporvee&apos;s website</title>
       </head>
       <body
@@ -80,6 +80,7 @@ export default async function RootLayout({
         <ClientProviders key={isEnabled ? "enabled" : "disabled"}>
           <Navbar entries={mappedEntries} />
           {children}
+          <CatBox />
           <LiveErrorBoundary>
             <SanityLive />
           </LiveErrorBoundary>

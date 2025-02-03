@@ -43,7 +43,6 @@ export default async function IndexPage() {
           //TODO: All tools from the database on circular big badges with their description under it
           //TODO: Slideshow from all images from projects on a glowing screen mockup inspired by GitHubs front page
         }
-
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
