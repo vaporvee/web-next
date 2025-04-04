@@ -1,12 +1,5 @@
 {
   "name": "vaporvee-web-next",
-  "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
   "devDependencies": {
     "prettier": "^3.5.3",
     "turbo": "^2.5.0",
@@ -16,11 +9,18 @@
     "node": ">=18"
   },
   "packageManager": "bun@1.1.42",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ],
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "trustedDependencies": [
-    "@parcel/watcher"
   ]
 }
