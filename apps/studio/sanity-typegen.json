@@ -1,4 +1,0 @@
-{
-    "generates": "../web/src/sanity/sanity.types.ts",
-    "path": "./schemaTypes/*.ts"
-}
