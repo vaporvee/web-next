@@ -2,7 +2,7 @@
   "name": "vaporvee-web-next",
   "devDependencies": {
     "prettier": "^3.5.3",
-    "turbo": "^2.5.0",
+    "turbo": "^2.5.4",
     "typescript": "5.5.4"
   },
   "engines": {

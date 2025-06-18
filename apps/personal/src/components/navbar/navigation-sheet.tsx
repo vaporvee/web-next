@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
+import { NavProp } from "@/lib/types";
 
-export const NavigationSheet = () => {
+export const NavigationSheet = ({items}: {items: NavProp[]}) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -12,9 +12,8 @@ export const NavigationSheet = () => {
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent>
-        <Logo />
-        <NavMenu orientation="vertical" className="mt-12" />
+      <SheetContent className="flex flex-col items-center justify-center text-center bg-sidebar border-l-sidebar-border">
+        <NavMenu orientation="vertical" items={items} className="mt-12 w-full" />
       </SheetContent>
     </Sheet>
   );

@@ -3,6 +3,7 @@ import starlight from "@astrojs/starlight";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeInlineCodeLanguage from "rehype-inline-code-language";
 import icon from "astro-icon";
+import catppuccin from "@catppuccin/starlight";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,7 +11,7 @@ export default defineConfig({
     starlight({
       title: "vaporvee Docs",
       defaultLocale: "root",
-      favicon: "../../packages/assets/icon/favicon.svg",
+      favicon: "/favicon.svg",
       locales: {
         root: {
           label: "English",
@@ -21,13 +22,19 @@ export default defineConfig({
           lang: "de",
         },
       },
+      plugins: [
+        catppuccin({
+          dark: { flavor: "macchiato", accent: "sky" },
+          light: { flavor: "latte", accent: "sky" }
+        })
+      ],
       customCss: ["./src/styles/custom.scss", "./src/styles/global.scss"],
-      social: {
-        github: "https://github.com/vaporvee",
-        discord: "https://discord.gg/3gqUrtbaur",
-        blueSky: "https://bsky.app/profile/vaporvee.com",
-        linkedin: "https://linkedin.com/in/yannik-ain/",
-      },
+      social: [
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/vaporvee' },
+        { icon: 'discord', label: 'Discord', href: 'https://discord.gg/3gqUrtbaur' },
+        { icon: 'blueSky', label: 'Bluesky', href: 'https://bsky.app/profile/vaporvee.com' },
+        { icon: 'linkedin', label: 'LinkedIn', href: 'https://linkedin.com/in/yannik-ain/' },
+      ],
       editLink: {
         baseUrl: "https://github.com/vaporvee/docs/edit/main/",
       },

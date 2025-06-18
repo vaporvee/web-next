@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SanityLive } from "@/sanity/live";
 import Navbar from "@/components/navbar/navbar";
+import TolgeeNextProvider from "./use-tolgee";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "vaporvee's Website",
+  icons: {
+    icon: "/favicon.svg",
+  },
   description: "Personal website of Yannik Ain / vaporvee",
 };
 
@@ -27,10 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth bg-background text-foreground dark`}
       >
-        <Navbar/>
-        {children}
+        <TolgeeNextProvider>
+          <Navbar />
+          {children}
+        </TolgeeNextProvider>
         <SanityLive />
       </body>
     </html>

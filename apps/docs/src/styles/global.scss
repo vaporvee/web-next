@@ -21,8 +21,9 @@ img[src$='#icon']{
 }
 
 gh-card{
-  background-color: #00000000!important;
-  border-color: #3c3349 !important;
+  background-color: var(--sl-link-card)!important;
+  border-color: var(--sl-color-gray-5) !important;
+  box-shadow: var(--sl-shadow-sm)!important;
 }
 
 .iconbox{
