@@ -4,6 +4,7 @@ import "./globals.css";
 import { SanityLive } from "@/sanity/live";
 import Navbar from "@/components/navbar/navbar";
 import TolgeeNextProvider from "./use-tolgee";
+import React from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +34,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth bg-background text-foreground dark`}
       >
-        <TolgeeNextProvider>
-          <Navbar />
-          {children}
-        </TolgeeNextProvider>
-        <SanityLive />
+        <React.StrictMode>
+          <TolgeeNextProvider>
+            <Navbar />
+            {children}
+            <SanityLive />
+          </TolgeeNextProvider>
+        </React.StrictMode>
       </body>
     </html>
   );
