@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 import { SanityLive } from "@/sanity/live";
 import Navbar from "@/components/navbar/navbar";
 import TolgeeNextProvider from "./use-tolgee";
 import React from "react";
+import { bespokeSans } from "@/lib/font-bespoke";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth bg-background text-foreground dark`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bespokeSans.variable} antialiased scroll-smooth bg-background text-foreground dark`}
       >
         <React.StrictMode>
           <TolgeeNextProvider>

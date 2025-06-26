@@ -14,7 +14,7 @@ const Navbar = () => {
   const ITEMS = [
     { id: 1, title: t("home"), href: "/" },
     { id: 2, title: t("blog"), href: "/blog" },
-    { id: 3, title: t("work"), href: "/work" },
+    { id: 3, title: t("portfolio"), href: "/portfolio" },
   ];
   return (
     <nav className="fixed top-6 inset-x-4 h-16 bg-sidebar/70 backdrop-blur-xs border border-sidebar-border max-w-screen-xl mx-auto rounded-full">
